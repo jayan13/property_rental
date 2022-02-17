@@ -1,0 +1,114 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:unit_no",
+ "creation": "2022-02-15 18:28:38.383435",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "unit_no",
+  "property_type",
+  "category",
+  "unit_status",
+  "customer_name",
+  "contract_start_date",
+  "contract_end_date",
+  "annual_rent",
+  "security_deposit",
+  "property_code",
+  "property_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "unit_no",
+   "fieldtype": "Data",
+   "label": "Unit No",
+   "unique": 1
+  },
+  {
+   "fieldname": "property_type",
+   "fieldtype": "Link",
+   "label": "Type",
+   "options": "Property Type"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nCommercial\nResidential"
+  },
+  {
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date"
+  },
+  {
+   "fieldname": "contract_end_date",
+   "fieldtype": "Date",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "annual_rent",
+   "fieldtype": "Currency",
+   "label": "Annual Rent"
+  },
+  {
+   "fieldname": "security_deposit",
+   "fieldtype": "Currency",
+   "label": "Security Deposit"
+  },
+  {
+   "fieldname": "property_code",
+   "fieldtype": "Link",
+   "label": "Property Code",
+   "options": "Property Details"
+  },
+  {
+   "depends_on": "property_code",
+   "fetch_from": "property_code.property_name",
+   "fetch_if_empty": 1,
+   "fieldname": "property_name",
+   "fieldtype": "Data",
+   "label": "Property Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer_name",
+   "fieldtype": "Data",
+   "label": "Tenant Name"
+  },
+  {
+   "fieldname": "unit_status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nOccupied\nVacant\nOccupied - Legal\nVacant - Legal"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-02-17 09:56:28.856243",
+ "modified_by": "Administrator",
+ "module": "Propery Management",
+ "name": "Property Unit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "property_code,property_name",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "unit_no"
+}

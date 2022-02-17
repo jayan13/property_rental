@@ -103,6 +103,11 @@ app_license = "MIT"
 #	}
 # }
 
+doc_events = {
+    "Sales Invoice": {
+        "on_submit": "property_rental.propery_management.doctype.property_unit.update_units.update_unit",
+    },
+}
 # Scheduled Tasks
 # ---------------
 
@@ -126,7 +131,29 @@ app_license = "MIT"
 
 # Testing
 # -------
-
+fixtures = [
+    {
+        "doctype": "Custom Field",
+        "filters": [
+            [
+                "name",
+                "in",
+                (
+                    "Sales Invoice-column_break_64",
+                    "Sales Invoice-unit_status",
+                    "Sales Invoice-security_deposit",
+                    "Sales Invoice-annual_rent",
+                    "Sales Invoice-contract_end_date",
+                    "Sales Invoice-contract_start_date",
+                    "Sales Invoice-property_unit_details",
+                    "Sales Invoice-property_unit",
+                    
+                ),
+            ]
+        ],
+    },
+    'Property Type',
+]
 # before_tests = "property_rental.install.before_tests"
 
 # Overriding Methods

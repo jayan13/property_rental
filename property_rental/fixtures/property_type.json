@@ -1,0 +1,162 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:42:51.663825",
+  "name": "SR",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "SR"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:43:23.571386",
+  "name": "OFF",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "OFF"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:43:53.442301",
+  "name": "2BHK",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "2BHK"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:44:50.186524",
+  "name": "3BHK",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "3BHK"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:44:59.829817",
+  "name": "1BHK",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "1BHK"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:45:26.130677",
+  "name": "4BHK",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "4BHK"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:45:55.051112",
+  "name": "Shop",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Shop"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:46:37.400362",
+  "name": "Duplex",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Duplex"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:47:27.521914",
+  "name": "Office",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Office"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:47:47.852505",
+  "name": "Facilities",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Facilities"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:48:35.132614",
+  "name": "Store",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Store"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:48:54.996471",
+  "name": "Land",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Land"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:49:11.222647",
+  "name": "Yard",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Yard"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:49:27.235874",
+  "name": "Camp",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Camp"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:49:57.714319",
+  "name": "Warehouse",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Warehouse"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-16 08:51:12.952850",
+  "name": "5BHK",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "5BHK"
+ }
+]
