@@ -9,7 +9,7 @@ def update_unit(doc,event):
         udoc.annual_rent = doc.annual_rent
         udoc.customer_name = doc.customer_name
         udoc.security_deposit = doc.security_deposit
-        udoc.unit_status = doc.unit_status
+        udoc.unit_status = 'Occupied'
         udoc.save()
         #frappe.throw("Error")
 

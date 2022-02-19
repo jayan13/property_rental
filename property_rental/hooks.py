@@ -140,13 +140,13 @@ fixtures = [
                 "in",
                 (
                     "Sales Invoice-column_break_64",
-                    "Sales Invoice-unit_status",
                     "Sales Invoice-security_deposit",
                     "Sales Invoice-annual_rent",
                     "Sales Invoice-contract_end_date",
                     "Sales Invoice-contract_start_date",
                     "Sales Invoice-property_unit_details",
                     "Sales Invoice-property_unit",
+                    "Property Unit-column_break_5",
                     
                 ),
             ]

@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Property Management",
  "links": [],
- "modified": "2022-02-17 10:22:05.161839",
+ "modified": "2022-02-18 15:57:24.409943",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Management",
@@ -24,8 +24,8 @@
  "shortcuts": [
   {
    "doc_view": "",
-   "label": "Property Details",
-   "link_to": "Property Details",
+   "label": "Property",
+   "link_to": "Property Master",
    "type": "DocType"
   },
   {

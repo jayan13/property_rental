@@ -4,5 +4,5 @@
 # import frappe
 import unittest
 
-class TestPropertyDetails(unittest.TestCase):
+class TestPropertyMaster(unittest.TestCase):
 	pass

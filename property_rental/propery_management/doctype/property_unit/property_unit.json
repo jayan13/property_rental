@@ -63,7 +63,7 @@
    "fieldname": "property_code",
    "fieldtype": "Link",
    "label": "Property Code",
-   "options": "Property Details"
+   "options": "Property Master"
   },
   {
    "depends_on": "property_code",
@@ -88,7 +88,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-17 09:56:28.856243",
+ "modified": "2022-02-18 16:06:59.220966",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Unit",
@@ -107,7 +107,7 @@
    "write": 1
   }
  ],
- "search_fields": "property_code,property_name",
+ "search_fields": "property_code,property_name,property_type",
  "sort_field": "modified",
  "sort_order": "DESC",
  "title_field": "unit_no"
