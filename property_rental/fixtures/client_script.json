@@ -1,0 +1,15 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Sales Invoice",
+  "enabled": 1,
+  "modified": "2022-02-20 12:47:58.566252",
+  "name": "Sales Invoice-Form",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "script": "\n\ncur_frm.fields_dict.property_unit.get_query = function(doc) {\n\treturn {\n\t\tfilters: {\n\t\t\tproperty_name: doc.property\n\t\t}\n\t}\n}",
+  "view": "Form"
+ }
+]

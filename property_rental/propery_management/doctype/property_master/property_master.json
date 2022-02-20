@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:property_code",
+ "autoname": "field:property_name",
  "creation": "2022-02-16 11:09:06.872547",
  "doctype": "DocType",
  "document_type": "Document",
@@ -19,7 +19,8 @@
    "in_global_search": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
-   "label": "Property Name"
+   "label": "Property Name",
+   "unique": 1
   },
   {
    "fieldname": "property_code",
@@ -33,7 +34,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-16 20:02:43.680655",
+ "modified": "2022-02-20 11:31:08.334695",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Master",
@@ -57,5 +58,5 @@
  "show_name_in_global_search": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "property_code"
+ "title_field": "property_name"
 }

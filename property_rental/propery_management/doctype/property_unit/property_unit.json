@@ -9,6 +9,8 @@
  "engine": "InnoDB",
  "field_order": [
   "unit_no",
+  "property_name",
+  "property_code",
   "property_type",
   "category",
   "unit_status",
@@ -16,9 +18,7 @@
   "contract_start_date",
   "contract_end_date",
   "annual_rent",
-  "security_deposit",
-  "property_code",
-  "property_name"
+  "security_deposit"
  ],
  "fields": [
   {
@@ -60,19 +60,18 @@
    "label": "Security Deposit"
   },
   {
+   "depends_on": "property_name",
+   "fetch_from": "property_name.property_code",
    "fieldname": "property_code",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Property Code",
-   "options": "Property Master"
+   "read_only": 1
   },
   {
-   "depends_on": "property_code",
-   "fetch_from": "property_code.property_name",
-   "fetch_if_empty": 1,
    "fieldname": "property_name",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Property Name",
-   "read_only": 1
+   "options": "Property Master"
   },
   {
    "fieldname": "customer_name",
@@ -88,7 +87,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-18 16:06:59.220966",
+ "modified": "2022-02-20 12:01:26.308863",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Unit",

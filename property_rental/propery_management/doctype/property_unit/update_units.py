@@ -6,9 +6,7 @@ def update_unit(doc,event):
         #print(f"{udoc.unit_no}")
         udoc.contract_start_date = doc.contract_start_date
         udoc.contract_end_date = doc.contract_end_date
-        udoc.annual_rent = doc.annual_rent
-        udoc.customer_name = doc.customer_name
-        udoc.security_deposit = doc.security_deposit
+        udoc.customer_name = doc.customer_name        
         udoc.unit_status = 'Occupied'
         udoc.save()
         #frappe.throw("Error")

@@ -139,20 +139,21 @@ fixtures = [
                 "name",
                 "in",
                 (
-                    "Sales Invoice-column_break_64",
-                    "Sales Invoice-security_deposit",
-                    "Sales Invoice-annual_rent",
+                    "Sales Invoice-column_break_64",                    
                     "Sales Invoice-contract_end_date",
                     "Sales Invoice-contract_start_date",
                     "Sales Invoice-property_unit_details",
                     "Sales Invoice-property_unit",
+                    "Sales Invoice-property",
                     "Property Unit-column_break_5",
                     
                 ),
             ]
         ],
     },
+    { "doctype": "Client Script", "filters": [ ["name", "in", ( "Sales Invoice-Form", )] ] },
     'Property Type',
+
 ]
 # before_tests = "property_rental.install.before_tests"
 
