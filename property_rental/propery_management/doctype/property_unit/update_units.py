@@ -13,7 +13,7 @@ def update_unit(doc,event):
         #frappe.throw("Error")
 
 def update_unit_status():
-    units=frappe.db.sql("""select name from  `tabProperty Unit`   where contract_end_date < CURDATE() and contract_end_date <> '' """)
+    units=frappe.db.sql("""select name from  `tabProperty Unit`   where contract_end_date < CURDATE() and contract_end_date <> '' and (unit_status ='Occupied' or unit_status ='Occupied - Legal') """)
     for unt in units:
         frappe.db.sql("""update `tabProperty Unit` set unit_status ='Vacant'  where name=%s """,unt[0])
         
