@@ -116,9 +116,6 @@ scheduler_events = {
  	"daily": [
  		"property_rental.propery_management.doctype.property_unit.update_units.update_unit_status"
  	],
- 	"hourly": [
- 		"property_rental.propery_management.doctype.property_unit.update_units.update_unit_status"
- 	],
 
     }
 
