@@ -17,6 +17,7 @@
   "customer_name",
   "contract_start_date",
   "contract_end_date",
+  "contract_issue_date",
   "annual_rent",
   "security_deposit"
  ],
@@ -83,11 +84,16 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "\nOccupied\nVacant\nOccupied - Legal\nVacant - Legal"
+  },
+  {
+   "fieldname": "contract_issue_date",
+   "fieldtype": "Date",
+   "label": "Contract issue Date"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-20 12:01:26.308863",
+ "modified": "2022-02-21 12:46:24.711393",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Unit",

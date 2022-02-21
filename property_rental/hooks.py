@@ -111,6 +111,17 @@ doc_events = {
 # Scheduled Tasks
 # ---------------
 
+scheduler_events = {
+
+ 	"daily": [
+ 		"property_rental.propery_management.doctype.property_unit.update_units.update_unit_status"
+ 	],
+ 	"hourly": [
+ 		"property_rental.propery_management.doctype.property_unit.update_units.update_unit_status"
+ 	],
+
+    }
+
 # scheduler_events = {
 # 	"all": [
 # 		"property_rental.tasks.all"
