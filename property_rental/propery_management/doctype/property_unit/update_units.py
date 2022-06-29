@@ -18,6 +18,3 @@ def update_unit_status():
         frappe.db.sql("""update `tabProperty Unit` set unit_status ='Vacant'  where name=%s """,unt[0])
         
     frappe.db.commit()
-
-
-

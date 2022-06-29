@@ -2,6 +2,46 @@
  {
   "docstatus": 0,
   "doctype": "Property Type",
+  "modified": "2022-02-21 17:25:04.396950",
+  "name": "Business Center",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Business Center"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-21 17:25:37.909496",
+  "name": "Coffee Shop",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Coffee Shop"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-21 17:44:18.896594",
+  "name": "Shops/Yards",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Shops/Yards"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-02-21 17:57:59.692230",
+  "name": "Stores/Camp",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "Stores/Camp"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
   "modified": "2022-02-16 08:42:51.663825",
   "name": "SR",
   "parent": null,
