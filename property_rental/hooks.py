@@ -106,6 +106,7 @@ app_license = "MIT"
 doc_events = {
     "Sales Invoice": {
         "on_submit": "property_rental.propery_management.doctype.property_unit.update_units.update_unit",
+        "before_insert": "property_rental.propery_management.doctype.property_unit.update_units.validate_unit",
     },
 }
 # Scheduled Tasks
