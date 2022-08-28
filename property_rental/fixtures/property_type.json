@@ -198,5 +198,15 @@
   "parentfield": null,
   "parenttype": null,
   "property_type": "5BHK"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Property Type",
+  "modified": "2022-08-01 21:33:09.962517",
+  "name": "STUD",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "property_type": "STUD"
  }
 ]
