@@ -8,7 +8,7 @@ def update_unit(doc,event):
         udoc.contract_end_date = doc.contract_end_date
         udoc.customer_name = doc.customer_name        
         udoc.unit_status = 'Occupied'
-        udoc.contract_issue_date=doc.posting_date,
+        udoc.contract_issue_date=doc.posting_date if doc.doctype=='Sales Invoice' else doc.transaction_date,
         udoc.save()        
         #frappe.throw("Error")
 
