@@ -14,7 +14,7 @@
  "is_standard": 1,
  "label": "Property Management",
  "links": [],
- "modified": "2022-02-18 15:57:24.409943",
+ "modified": "2022-09-01 17:10:51.878056",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Management",
@@ -38,6 +38,12 @@
    "doc_view": "",
    "label": "Property Type",
    "link_to": "Property Type",
+   "type": "DocType"
+  },
+  {
+   "doc_view": "",
+   "label": "Property Maintenance",
+   "link_to": "Property Maintenance",
    "type": "DocType"
   }
  ]

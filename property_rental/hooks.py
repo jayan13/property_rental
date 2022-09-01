@@ -159,6 +159,13 @@ fixtures = [
                     "Sales Invoice-property_unit",
                     "Sales Invoice-property",
                     "Property Unit-column_break_5",
+                    'Request for Quotation-property_maintenance',
+                    'Supplier Quotation-property_maintenance',
+                    'Purchase Receipt-property_maintenance',
+                    'Purchase Order-property_maintenance',
+                    'Purchase Invoice-property_maintenance',
+                    'Journal Entry-property_maintenance',
+                    'Payment Entry-property_maintenance'
                     
                 ),
             ]

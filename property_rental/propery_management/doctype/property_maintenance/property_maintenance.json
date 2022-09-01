@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Maint-{property}-{property_unit}-{#####}",
+ "creation": "2022-09-01 13:01:27.537750",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "property",
+  "propperty_unit",
+  "start_date",
+  "end_date",
+  "column_break_5",
+  "company",
+  "status",
+  "estimated_costing",
+  "cost_center",
+  "project",
+  "section_break_10",
+  "note"
+ ],
+ "fields": [
+  {
+   "fieldname": "property",
+   "fieldtype": "Link",
+   "label": "Property",
+   "options": "Property Master"
+  },
+  {
+   "fieldname": "propperty_unit",
+   "fieldtype": "Link",
+   "label": "Propperty Unit",
+   "options": "Property Unit"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "estimated_costing",
+   "fieldtype": "Currency",
+   "label": "Estimated Costing"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "note",
+   "fieldtype": "Text Editor",
+   "label": "Note"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project",
+   "read_only": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nCompleted\nCancelled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Request for Quotation",
+   "link_fieldname": "property_maintenance"
+  },
+  {
+   "link_doctype": "Supplier Quotation",
+   "link_fieldname": "property_maintenance"
+  },
+  {
+   "link_doctype": "Purchase Invoice",
+   "link_fieldname": "property_maintenance"
+  },
+  {
+   "link_doctype": "Purchase Order",
+   "link_fieldname": "property_maintenance"
+  },
+  {
+   "link_doctype": "Purchase Receipt",
+   "link_fieldname": "property_maintenance"
+  },
+  {
+   "link_doctype": "Journal Entry",
+   "link_fieldname": "property_maintenance"
+  },
+  {
+   "link_doctype": "Payment Entry",
+   "link_fieldname": "property_maintenance"
+  }
+ ],
+ "modified": "2022-09-01 15:07:53.659990",
+ "modified_by": "Administrator",
+ "module": "Propery Management",
+ "name": "Property Maintenance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

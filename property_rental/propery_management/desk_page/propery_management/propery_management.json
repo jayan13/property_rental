@@ -35,6 +35,11 @@
    "label": "Property Type",
    "link_to": "Property Type",
    "type": "DocType"
+  },
+  {
+   "label": "Property Maintenance",
+   "link_to": "Property Maintenance",
+   "type": "DocType"
   }
  ]
 }
