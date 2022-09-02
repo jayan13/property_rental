@@ -165,7 +165,8 @@ fixtures = [
                     'Purchase Order-property_maintenance',
                     'Purchase Invoice-property_maintenance',
                     'Journal Entry-property_maintenance',
-                    'Payment Entry-property_maintenance'
+                    'Payment Entry-property_maintenance',
+                    'Purchase Invoice Item-property_maintenance'
                     
                 ),
             ]
@@ -173,6 +174,7 @@ fixtures = [
     },
     { "doctype": "Client Script", "filters": [ ["name", "in", ( "Sales Invoice-Form", )] ] },
     'Property Type',
+    'Project Type',
 
 ]
 # before_tests = "property_rental.install.before_tests"

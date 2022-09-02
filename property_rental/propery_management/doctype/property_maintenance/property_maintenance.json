@@ -1,24 +1,29 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Maint-{property}-{property_unit}-{#####}",
+ "autoname": "naming_series:",
  "creation": "2022-09-01 13:01:27.537750",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
+  "maintenance_title",
+  "naming_series",
   "property",
   "propperty_unit",
   "start_date",
   "end_date",
   "column_break_5",
   "company",
+  "project",
   "status",
   "estimated_costing",
+  "actual_costing",
   "cost_center",
-  "project",
   "section_break_10",
-  "note"
+  "note",
+  "column_break_15",
+  "actions_performed"
  ],
  "fields": [
   {
@@ -30,7 +35,7 @@
   {
    "fieldname": "propperty_unit",
    "fieldtype": "Link",
-   "label": "Propperty Unit",
+   "label": "Property Unit",
    "options": "Property Unit"
   },
   {
@@ -70,8 +75,8 @@
   },
   {
    "fieldname": "note",
-   "fieldtype": "Text Editor",
-   "label": "Note"
+   "fieldtype": "Text",
+   "label": "Error Description"
   },
   {
    "fieldname": "project",
@@ -86,6 +91,38 @@
    "fieldtype": "Select",
    "label": "Status",
    "options": "Open\nCompleted\nCancelled"
+  },
+  {
+   "fieldname": "maintenance_title",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Maintenance Title"
+  },
+  {
+   "fetch_from": "project.total_purchase_cost",
+   "fieldname": "actual_costing",
+   "fieldtype": "Currency",
+   "label": "Actual Costing",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_15",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "actions_performed",
+   "fieldtype": "Text",
+   "label": "Actions performed"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "MAINT-",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -119,7 +156,7 @@
    "link_fieldname": "property_maintenance"
   }
  ],
- "modified": "2022-09-01 15:07:53.659990",
+ "modified": "2022-09-02 16:33:35.656579",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Maintenance",

@@ -8,10 +8,14 @@ from erpnext.projects.doctype.project.project import Project
 
 class PropertyMaintenance(Document):
 
+	def on_trash(self):
+		pjt=frappe.get_doc("Project", self.project)
+		pjt.delete()
+
 	def after_insert(self):
 		project = frappe.new_doc("Project")
-		project.project_name=self.name
-		project.project_type="Other"
+		project.project_name=self.maintenance_title
+		project.project_type="Property Maintenance"
 		project.expected_start_date=self.start_date
 		project.expected_end_date=self.end_date
 		project.company=self.company
@@ -19,7 +23,7 @@ class PropertyMaintenance(Document):
 		project.cost_center=self.cost_center
 		project.notes=self.note
 		project.insert(ignore_permissions=True)
-		self.project=project.name
+		self.project=project.name		
 		self.save()
 
 	def on_update(self):
