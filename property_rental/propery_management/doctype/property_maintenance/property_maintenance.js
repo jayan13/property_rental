@@ -4,10 +4,11 @@
 frappe.ui.form.on('Property Maintenance', {
 	 refresh: function(frm) {
 		
+	if (frm.doc.project)
+	{
 		frappe.db.get_doc('Project', frm.doc.project).then(doc => {
-        //console.log(doc)
-		frm.set_value('actual_costing', doc.total_purchase_cost)		
-    })
+		frm.set_value('actual_costing', doc.total_purchase_cost) })
+	}
 
 		frm.set_query("propperty_unit", function() {
 			return {
@@ -23,11 +24,5 @@ frappe.ui.form.on('Property Maintenance', {
 			}
 		});
 
-	 },
-	 actual_costing: function(frm, cdt, cdn)
-	 {
-		 //frm.doc.project
-		 pjt=frappe.model.get_doc("Project", frm.doc.project)
-		 frm.set_value('actual_costing', pjt.total_purchase_cost)
 	 }
 });
