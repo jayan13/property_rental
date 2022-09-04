@@ -14,7 +14,7 @@ class PropertyMaintenance(Document):
 
 	def after_insert(self):
 		project = frappe.new_doc("Project")
-		project.project_name=self.maintenance_title
+		project.project_name=self.name+'-'+self.maintenance_title
 		project.project_type="Property Maintenance"
 		project.expected_start_date=self.start_date
 		project.expected_end_date=self.end_date
