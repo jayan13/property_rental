@@ -166,13 +166,14 @@ fixtures = [
                     'Purchase Invoice-property_maintenance',
                     'Journal Entry-property_maintenance',
                     'Payment Entry-property_maintenance',
-                    'Purchase Invoice Item-property_maintenance'
-                    
+                    'Purchase Invoice Item-property_maintenance',
+                    'Contract-property',
+                    'Contract-property_unit',
                 ),
             ]
         ],
     },
-    { "doctype": "Client Script", "filters": [ ["name", "in", ( "Sales Invoice-Form", )] ] },
+    { "doctype": "Client Script", "filters": [ ["name", "in", ( "Sales Invoice-Form","Contract-Form")] ] },
     'Property Type',
     'Project Type',
 
