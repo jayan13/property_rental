@@ -12,7 +12,7 @@ class PropertyMaintenance(Document):
 		pjt=frappe.get_doc("Project", self.project)
 		pjt.delete()
 
-	def after_insert(self):
+	def on_submit(self):
 		project = frappe.new_doc("Project")
 		project.project_name=self.name+'-'+self.maintenance_title
 		project.project_type="Property Maintenance"
@@ -23,24 +23,26 @@ class PropertyMaintenance(Document):
 		project.cost_center=self.cost_center
 		project.notes=self.note
 		project.insert(ignore_permissions=True)
-		self.project=project.name		
+		self.project=project.name
+		self.status='Open'		
 		self.save()
 
 	def on_update(self):
-		pjt=frappe.get_doc("Project", self.project)
-		if pjt.status!=self.status:
-			pjt.status=	self.status
-			if self.status=='Completed':
-				pjt.expected_end_date=nowdate()
+		if self.project:
+			pjt=frappe.get_doc("Project", self.project)
+			if pjt.status!=self.status:
+				pjt.status=	self.status
+				if self.status=='Completed':
+					pjt.expected_end_date=nowdate()
+				else:
+					pjt.expected_end_date=self.end_date
 			else:
 				pjt.expected_end_date=self.end_date
-		else:
+				
+			pjt.expected_start_date=self.start_date
 			pjt.expected_end_date=self.end_date
-			
-		pjt.expected_start_date=self.start_date
-		pjt.expected_end_date=self.end_date
-		pjt.company=self.company
-		pjt.estimated_costing=self.estimated_costing
-		pjt.cost_center=self.cost_center
-		pjt.notes=self.note
-		pjt.save()
+			pjt.company=self.company
+			pjt.estimated_costing=self.estimated_costing
+			pjt.cost_center=self.cost_center
+			pjt.notes=self.note
+			pjt.save()

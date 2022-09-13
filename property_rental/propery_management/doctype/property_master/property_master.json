@@ -9,7 +9,9 @@
  "engine": "InnoDB",
  "field_order": [
   "property_name",
-  "property_code"
+  "property_code",
+  "landlord",
+  "address"
  ],
  "fields": [
   {
@@ -30,11 +32,21 @@
    "in_standard_filter": 1,
    "label": "Property Code",
    "unique": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "Address"
+  },
+  {
+   "fieldname": "landlord",
+   "fieldtype": "Data",
+   "label": "Landlord"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-02-20 11:31:08.334695",
+ "modified": "2022-09-06 17:58:46.253054",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Master",

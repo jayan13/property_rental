@@ -85,7 +85,7 @@
    "fieldname": "unit_status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "\nOccupied\nVacant\nOccupied - Legal\nVacant - Legal"
+   "options": "\nOccupied\nVacant\nOccupied - Legal\nVacant - Legal\nOut Of Service"
   },
   {
    "fieldname": "contract_issue_date",
@@ -95,7 +95,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-08-30 16:43:46.076992",
+ "modified": "2022-09-12 13:29:54.984764",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Unit",

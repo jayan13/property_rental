@@ -23,7 +23,9 @@
   "section_break_10",
   "note",
   "column_break_15",
-  "actions_performed"
+  "actions_performed",
+  "amended_from",
+  "workflow_state"
  ],
  "fields": [
   {
@@ -44,6 +46,7 @@
    "label": "Start Date"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "end_date",
    "fieldtype": "Date",
    "label": "End Date"
@@ -79,6 +82,7 @@
    "label": "Error Description"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "project",
    "fieldtype": "Link",
    "label": "Project",
@@ -86,11 +90,12 @@
    "read_only": 1
   },
   {
-   "default": "Open",
+   "allow_on_submit": 1,
+   "default": "Approval Pending",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Open\nCompleted\nCancelled"
+   "options": "Approval Pending\nOpen\nCompleted\nCancelled"
   },
   {
    "fieldname": "maintenance_title",
@@ -101,6 +106,7 @@
    "label": "Maintenance Title"
   },
   {
+   "allow_on_submit": 1,
    "fetch_from": "project.total_purchase_cost",
    "fieldname": "actual_costing",
    "fieldtype": "Currency",
@@ -112,6 +118,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "actions_performed",
    "fieldtype": "Text",
    "label": "Actions performed"
@@ -123,9 +130,26 @@
    "label": "Series",
    "options": "MAINT-",
    "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Property Maintenance",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "workflow_state",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "workflow_state"
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [
   {
    "link_doctype": "Request for Quotation",
@@ -156,7 +180,7 @@
    "link_fieldname": "property_maintenance"
   }
  ],
- "modified": "2022-09-05 10:37:35.081869",
+ "modified": "2022-09-13 17:00:24.206358",
  "modified_by": "Administrator",
  "module": "Propery Management",
  "name": "Property Maintenance",
