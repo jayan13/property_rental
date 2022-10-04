@@ -9,8 +9,9 @@ from erpnext.projects.doctype.project.project import Project
 class PropertyMaintenance(Document):
 
 	def on_trash(self):
-		pjt=frappe.get_doc("Project", self.project)
-		pjt.delete()
+		if self.project:
+			pjt=frappe.get_doc("Project", self.project)
+			pjt.delete()
 
 	def on_submit(self):
 		project = frappe.new_doc("Project")
