@@ -73,7 +73,7 @@ def quotation_comparison(property_main):
 					order by sq.supplier""".format(
 					itm.item_code,s.name,s.supplier_name
 				),
-				as_dict=1,debug=1
+				as_dict=1,debug=0
 				)
 
 			if supplier_quotation_item:
