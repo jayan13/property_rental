@@ -51,7 +51,9 @@ def quotation_comparison(property_main):
 	for itm in item_list:
 		dati={}
 		last_purchase_details = get_last_purchase_details(itm.item_code)
-		lastpur = last_purchase_details["base_net_rate"]
+		lastpur=0
+		if last_purchase_details:
+			lastpur = last_purchase_details["base_net_rate"]
 		dati.update({'item_code':itm.item_code+'-'+itm.item_name,'uom':itm.uom,'qty':itm.qty,'last_purchase_rate':lastpur})
 		spi=[]
 	
