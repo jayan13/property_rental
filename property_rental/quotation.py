@@ -23,8 +23,9 @@ def quotation_comparison(property_main):
 				`tabSupplier Quotation` sq
 			WHERE
 				sqi.parent = sq.name
-				AND sqi.docstatus < 2
+				AND sq.docstatus < 2
 				AND sq.property_maintenance='{0}'
+				AND sq.status<>'Expired'
 				group by sq.supplier order by sq.supplier """.format(
 				property_main
 			),
@@ -40,7 +41,8 @@ def quotation_comparison(property_main):
 				`tabSupplier Quotation` sq
 			WHERE
 				sqi.parent = sq.name
-				AND sqi.docstatus < 2
+				AND sq.docstatus < 2
+				AND sq.status<>'Expired'
 				AND sq.property_maintenance='{0}'
 				group by sqi.item_code order by sqi.qty desc""".format(
 				property_main
@@ -68,11 +70,12 @@ def quotation_comparison(property_main):
 					`tabSupplier Quotation` sq
 				WHERE
 					sqi.parent = sq.name
-					AND sqi.docstatus < 2
+					AND sq.docstatus < 2
+					AND sq.status<>'Expired'
 					AND sqi.item_code ='{0}'
 					AND sq.name='{1}'
 					AND sq.supplier='{2}'
-					order by sq.supplier""".format(
+					order by sq.supplier limit 0,1""".format(
 					itm.item_code,s.name,s.supplier_name
 				),
 				as_dict=1,debug=0
