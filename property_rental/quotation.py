@@ -35,7 +35,7 @@ def quotation_comparison(property_main):
 	item_list = frappe.db.sql(
 			"""
 			SELECT			
-				DISTINCT(sqi.item_code) as item_code,sqi.uom,sqi.qty,sqi.conversion_factor,sqi.item_name
+				DISTINCT(sqi.item_code) as item_code,sq.company,sqi.uom,sqi.qty,sqi.conversion_factor,sqi.item_name
 			FROM
 				`tabSupplier Quotation Item` sqi,
 				`tabSupplier Quotation` sq
@@ -56,7 +56,13 @@ def quotation_comparison(property_main):
 		lastpur=0
 		if last_purchase_details:
 			lastpur = last_purchase_details["base_net_rate"]
-		dati.update({'item_code':itm.item_code+'-'+itm.item_name,'uom':itm.uom,'qty':itm.qty,'last_purchase_rate':lastpur})
+
+		company_total_stock=0
+		ac_qty=frappe.db.sql(""" select sum(actual_qty) as actual_qty from `tabBin` where item_code='{0}' 
+		and warehouse in (select name from `tabWarehouse` where company='{1}') group by item_code""".format(itm.item_code,itm.company),as_dict=1,debug=0)
+		if ac_qty:
+			company_total_stock=ac_qty[0].actual_qty
+		dati.update({'item_code':itm.item_code+'-'+itm.item_name,'uom':itm.uom,'qty':itm.qty,'last_purchase_rate':lastpur,'company_total_stock':company_total_stock})
 		spi=[]
 	
 		for s in supplier_list:
