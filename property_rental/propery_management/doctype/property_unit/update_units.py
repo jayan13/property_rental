@@ -13,9 +13,13 @@ def update_unit(doc,event):
         #frappe.throw("Error")
 
 def validate_unit(doc,event):
-    if doc.property_unit:
+    if doc.property_unit and doc.company!='AL NOKHBA BUILDING':
         if doc.contract_start_date and doc.contract_end_date:
             prv=frappe.db.sql(""" select * from `tabSales Invoice` where docstatus=1 and property_unit='{unit}' and 
+            (('{start}' between contract_start_date and contract_end_date) 
+            OR ('{end}' between contract_start_date and contract_end_date))
+            """.format(unit=doc.property_unit,start=doc.contract_start_date,end=doc.contract_end_date)) or frappe.db.sql(""" 
+            select * from `tabSales Order` where docstatus=1 and property_unit='{unit}' and 
             (('{start}' between contract_start_date and contract_end_date) 
             OR ('{end}' between contract_start_date and contract_end_date))
             """.format(unit=doc.property_unit,start=doc.contract_start_date,end=doc.contract_end_date))
