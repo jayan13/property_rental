@@ -110,7 +110,7 @@ doc_events = {
     },
     "Sales Order": {
         "on_submit": "property_rental.propery_management.doctype.property_unit.update_units.update_unit",
-        "before_insert": "property_rental.propery_management.doctype.property_unit.update_units.validate_unit",
+        "before_insert": "property_rental.propery_management.doctype.property_unit.update_units.validate_unit_order",
     },
 }
 # Scheduled Tasks
